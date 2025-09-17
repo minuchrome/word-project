@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word-project</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <a href="/">메인</a>
+    <a href="/manage">관리</a>
+    <a href="/test">시험</a>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>단어 관리</h1>
+<form action="/api/add" method="post">
+    단어
+    <input type="text" name="word">
+    뜻
+    <input type="text" name="def">
+    <button type="submit">추가</button>
+</form>
+{% for word in words %}
+<div>
+    <p>단어: {{word["word"]}}</p>
+    <p>뜻: {{word["def"]}}</p>
+</div>
+{% endfor %}
+{% endblock %}
