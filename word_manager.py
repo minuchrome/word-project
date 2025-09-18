@@ -30,6 +30,8 @@ class WordManager:
         return self.data["words"]
     
     def add_word(self, word):
+        word["att"] = 0
+        word["rig"] = 0
         if "words" not in self.data:
             self.data = self.init_data()
         self.data["words"].append(word)
@@ -37,7 +39,7 @@ class WordManager:
 
     def remove_word(self, index):
         if "words" not in self.data:
-            return
-        if not (0 <= index < len(self.words["words"])):
-            return
-        self.words["words"].pop(index)
+            return False
+        if not (0 <= index < len(self.data["words"])):
+            return False
+        return self.data["words"].pop(index)

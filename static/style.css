@@ -1,5 +1,46 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+:root{
+    --dark: #222222;
+    --sldark: #969696;
+    --light: #f0f0f0;
+}
+
 *{
     font-family: "Pretendard";
+    margin: 0;
+    padding: 0;
+}
+
+nav > *{
+    display: inline;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.logo{
+    color: var(--dark);
+    font-style: italic;
+    font-weight: bold;
+}
+
+nav{
+    margin: 1em;
+}
+
+h1{
+    font-size: 3em;
+}
+
+a{
+    color: var(--sldark);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--dark);
+}
+
+hr{
+    color: var(--sldark)
 }

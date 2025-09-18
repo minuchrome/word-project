@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
-    <a href="/">메인</a>
-    <a href="/manage">관리</a>
-    <a href="/test">시험</a>
-    {% block content %}
-    {% endblock %}
+    <main>
+        <nav>
+            <a href="/"><span class="logo">NAPSE</span></a>
+            <a href="/manage">관리</a>
+            <a href="/test">시험</a>
+        </nav>
+        <hr>
+        {% block content %}
+        {% endblock %}
+    </main>
 </body>
 </html>
